@@ -56,3 +56,7 @@ The Rounded Loading Button has many configurable properties, including:
 
    All contributions are welcome!
 
+## Update
+this version has a rounded border with colored border
+
+
