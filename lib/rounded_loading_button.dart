@@ -23,9 +23,9 @@ class RoundedLoadingButton extends StatefulWidget {
 
   /// The primary color of the button
   final Color? color;
+
   /// The loader color of the button
   final Color? loaderColor;
-
 
   /// The vertical extent of the button.
   final double height;
@@ -181,7 +181,8 @@ class RoundedLoadingButtonState extends State<RoundedLoadingButton>
       height: widget.loaderSize,
       width: widget.loaderSize,
       child: CircularProgressIndicator(
-        valueColor: AlwaysStoppedAnimation<Color>(widget.loaderColor?? widget.valueColor),
+        valueColor: AlwaysStoppedAnimation<Color>(
+            widget.loaderColor ?? widget.valueColor),
         strokeWidth: widget.loaderStrokeWidth,
       ),
     );
@@ -202,6 +203,7 @@ class RoundedLoadingButtonState extends State<RoundedLoadingButton>
       padding: const EdgeInsets.all(0),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
+          surfaceTintColor: Colors.white,
           onSurface: widget.disabledColor,
           minimumSize: Size(_squeezeAnimation.value, widget.height),
           shape: widget.borderColor == null
