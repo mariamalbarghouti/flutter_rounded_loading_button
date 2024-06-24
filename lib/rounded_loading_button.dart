@@ -204,7 +204,7 @@ class RoundedLoadingButtonState extends State<RoundedLoadingButton>
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           surfaceTintColor: Colors.white,
-          onSurface: widget.disabledColor,
+          disabledForegroundColor: widget.disabledColor,
           minimumSize: Size(_squeezeAnimation.value, widget.height),
           shape: widget.borderColor == null
               ? RoundedRectangleBorder(
@@ -215,7 +215,7 @@ class RoundedLoadingButtonState extends State<RoundedLoadingButton>
                   side: BorderSide(color: widget.borderColor!),
                 ),
           // backgroundColor: Colors.red,
-          primary: widget.color,
+          backgroundColor: widget.color,
           elevation: widget.elevation,
           padding: const EdgeInsets.all(0),
         ),
